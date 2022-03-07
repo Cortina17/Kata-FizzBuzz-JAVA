@@ -34,4 +34,8 @@ public class FizzBuzzTest {
         assertEquals("22", FizzBuzz.check_if_number_returns_string(22));
         assertEquals("41", FizzBuzz.check_if_number_returns_string(41));
     }
+
+    @Test public void test_check_regex(){
+        assertEquals("f", FizzBuzz.check_if_number_returns_string(31));
+    }
 }
