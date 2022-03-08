@@ -9,13 +9,25 @@ public class FizzBuzz {
         return number % 15 == 0 ? "FizzBuzz" : (number % 3 == 0 ? "Fizz" : number % 5 == 0 ? "Buzz" : String.valueOf(number));
     }
 
-    public static String check_regex(int number){
+    public static String check_regex_3(int number){
         String num = String.valueOf(number); 
-        Pattern pattern = Pattern.compile(num);
-        Matcher matcher = pattern.matcher(num);
-        boolean matchFound = matcher.find("3");
+        Pattern patternThree = Pattern.compile("3");
+        Matcher matcherThree = patternThree.matcher(num);
+        boolean matchFound = matcherThree.find();
         if(matchFound) {
             return "Fizz";
+        } else {
+            return num;
+        }
+    }
+
+    public static String check_regex_5(int number){
+        String num = String.valueOf(number); 
+        Pattern patternFive = Pattern.compile("5");
+        Matcher matcherFive = patternFive.matcher(num);
+        boolean matchFound = matcherFive.find();
+        if(matchFound) {
+            return "Buzz";
         } else {
             return num;
         }
